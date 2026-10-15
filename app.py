@@ -12,7 +12,7 @@ app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config['SESSION_COOKIE_SECURE'] = False
 
-ADMIN_EMAIL = os.getenv('ADMIN_EMAIL', 'babulsinghbhumi@gmail.com')
+ADMIN_EMAIL = os.getenv('ADMIN_EMAIL', 'support@pesawala.com')
 
 # Default password: Babul@123
 # For live use, set ADMIN_PASSWORD_HASH in environment variables
@@ -30,8 +30,8 @@ client = razorpay.Client(auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET))
 
 SITE = {
     'brand': 'PESAWALA',
-    'phone': '+91 7903812908',
-    'email': 'babulsinghbhumi@gmail.com',
+    'phone': '+1 3617230932',
+    'email': 'support@pesawala.com',
     'city': 'Noida, India',
     'hero_title': 'Boost Your Brand Visibility With Performance-Driven Digital Solutions',
     'hero_subtitle': 'Quantumnts Digital is a modern digital solutions company dedicated to helping businesses grow in the online world. We specialize in delivering smart,'
@@ -51,7 +51,7 @@ SITE = {
     'team': [
         {
             'name': 'Virat Verma',
-            'role': 'Founder & Strategy Lead',
+            'role': 'Founder & CEO',
             'bio': 'Guides growth strategy, brand positioning, and high-level campaign planning.',
             'image': 'virat.jpg'
         },
