@@ -1,0 +1,429 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero-section">
+    <!-- Animated particle canvas background -->
+    <canvas id="heroCanvas"></canvas>
+    <!-- Overlay gradient -->
+    <div class="hero-overlay"></div>
+    <div class="container" style="position:relative;z-index:2;">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="eyebrow">Boost your brand’s visibility and sales</span>
+                <h1 class="display-5 fw-bold mt-3">{{ site.hero_title }}</h1>
+                <p class="lead mt-3">{{ site.hero_subtitle }}</p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="{{ url_for('contact') }}" class="btn btn-brand btn-lg">Get Started</a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">View Services</a>
+                </div>
+                <div class="hero-stats row g-3 mt-4">
+                    <div class="col-4">
+                        <div class="stat-card"><strong>150+</strong><span>Projects</span></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="stat-card"><strong>92%</strong><span>Retention</span></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="stat-card"><strong>24/7</strong><span>Support</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="hero-visual glass-card">
+                    <div class="hero-grid">
+                        <div class="metric-box">
+                            <span class="metric-label">Traffic Growth</span>
+                            <strong>+186%</strong>
+                        </div>
+                        <div class="metric-box active">
+                            <span class="metric-label">Leads</span>
+                            <strong>1,240</strong>
+                        </div>
+                        <div class="metric-box wide">
+                            <span class="metric-label">Campaign Health</span>
+                            <div class="progress thin-progress">
+                                <div class="progress-bar" style="width:82%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-box wide light-box">
+                            <span class="metric-label">Multi-channel growth dashboard</span>
+                            <p>SEO, social, web, ads, and CRM under one strategy-led workflow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-5" data-aos="fade-up">
+                <div class="image-stack">
+                    <div class="image-card"><img src="{{ url_for('static', filename='images/about-1.svg') }}"
+                                                 alt="about"></div>
+                    <div class="mini-card shadow-sm">Welcome to <strong>{{ site.brand }}</strong></div>
+                </div>
+            </div>
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                <span class="section-tag">Welcome</span>
+                <h2>Where your clicks turn into customers</h2>
+                <p>We design digital experiences that look polished, communicate clearly, and convert traffic into real
+                    business opportunities. This build closely follows the visual rhythm of premium agency websites
+                    while remaining safe, editable, and uniquely yours.</p>
+                <div class="feature-grid mt-4">
+                    <div class="feature-badge"><i class="bi bi-check2-circle"></i> Result-driven execution</div>
+                    <div class="feature-badge"><i class="bi bi-check2-circle"></i> Tailored strategies</div>
+                    <div class="feature-badge"><i class="bi bi-check2-circle"></i> Experienced team</div>
+                    <div class="feature-badge"><i class="bi bi-check2-circle"></i> Transparent reporting</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad soft-bg">
+    <div class="container">
+        <div class="row g-4 align-items-stretch">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="content-card h-100"><h4>Our Mission</h4>
+                    <p>To help businesses grow online with strategic design, marketing, and system development.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="content-card h-100"><h4>Our Vision</h4>
+                    <p>To build digital-first brands through clear communication, measurable outcomes, and scalable
+                        technology.</p></div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="content-card h-100"><h4>Why Choose Us</h4>
+                    <p>We combine clean UI, practical strategy, and secure implementation for a strong business-ready
+                        presence.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="text-center section-head" data-aos="fade-up">
+            <span class="section-tag">Services</span>
+            <h2>Customized digital solutions for you</h2>
+        </div>
+        <div class="row g-4 mt-2">
+            {% for service in site.services %}
+            <div class="col-lg-4 col-md-6" id="service-{{ loop.index }}" data-aos="zoom-in"
+                 data-aos-delay="{{ loop.index * 40 }}">
+                <div class="service-card h-100">
+                    <div class="service-icon"><img src="{{ url_for('static', filename=service.img) }}" alt="{{ service.title }}"></div>
+                    <h4>{{ service.title }}</h4>
+                    <p>{{ service.desc }}</p>
+                    <a href="{{ url_for('contact') }}">Read More <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-pad brand-section">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="section-tag">We Build Brand</span>
+                <h2>We’re your growth partner, not just another agency</h2>
+                <p>Our design, content, development, and performance workflows align to create a polished,
+                    conversion-friendly front end with the structure users expect from a modern agency site.</p>
+                <div class="row g-3 mt-3">
+                    <div class="col-sm-6">
+                        <div class="mini-feature"><i class="bi bi-people"></i>
+                            <div><strong>Experienced Team</strong><span>Strategy, design, and development</span></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mini-feature"><i class="bi bi-graph-up-arrow"></i>
+                            <div><strong>Results-Driven</strong><span>Growth-focused execution</span></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mini-feature"><i class="bi bi-sliders"></i>
+                            <div><strong>Custom Solutions</strong><span>Tailored to your goals</span></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mini-feature"><i class="bi bi-heart"></i>
+                            <div><strong>Client-Centric</strong><span>Clear communication first</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="brand-panel glass-card">
+                    <img src="{{ url_for('static', filename='images/dashboard.svg') }}" alt="dashboard"
+                         class="img-fluid rounded-4">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="text-center section-head" data-aos="fade-up">
+            <span class="section-tag">Meet Our Experts</span>
+        </div>
+        <div class="row g-4 mt-1">
+            {% for member in site.team %}
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="{{ loop.index * 60 }}">
+                <div class="team-card h-100">
+                    <div class="team-photo-wrap">
+                        <img src="{{ url_for('static', filename='images/' ~ member.image) }}" alt="{{ member.name }}"
+                             class="team-photo">
+                    </div>
+                    <h5>{{ member.name }}</h5>
+                    <span>{{ member.role }}</span>
+                    <p>{{ member.bio }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-pad soft-bg">
+    <div class="container">
+        <div class="text-center section-head" data-aos="fade-up">
+            <span class="section-tag">Our Package</span>
+
+        </div>
+        <div class="row g-4 mt-1">
+            {% for package in site.packages %}
+            <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="{{ loop.index * 40 }}">
+                <div class="package-card h-100">
+                    <div class="package-top">
+                        <h5>{{ package.name }}</h5>
+                        <small>{{ package.subtitle }}</small>
+                        <div class="package-price">{{ package.price_display }}</div>
+                    </div>
+                    <ul>
+                        {% for item in package.features %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                    <a class="btn btn-outline-dark w-100" href="{{ url_for('pay_now') }}">Pay Now</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="text-center section-head" data-aos="fade-up">
+            <span class="section-tag">Our Happy Clients</span>
+        </div>
+        <div class="client-grid mt-4" data-aos="fade-up">
+            {% for brand in ['Athworth','Craft Kashmire','Ditr','Kelevo','Odyssey','SBA','Themes Wedding','Rege'] %}
+            <div class="client-logo">{{ brand }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section-pad testimonial-wrap">
+    <div class="container">
+        <div class="text-center section-head text-white" data-aos="fade-up">
+            <span class="section-tag light">Love From Clients</span>
+        </div>
+        <div class="swiper testimonialSwiper mt-4" data-aos="zoom-in">
+            <div class="swiper-wrapper">
+                {% for t in site.testimonials %}
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p>“{{ t.text }}”</p>
+                        <strong>{{ t.name }}</strong>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad bg-white">
+    <div class="container" style="max-width: 1100px;">
+
+        <div class="text-center mb-4" data-aos="fade-up">
+            <h2 style="font-size: 48px; font-weight: 700; color: #111;">FAQs</h2>
+        </div>
+
+        <div class="accordion mb-5" id="faqAcc" data-aos="fade-up" data-aos-delay="80">
+            {% for faq in site.faqs %}
+            <div class="accordion-item mb-3" style="border: 1px solid #e5e5e5; border-radius: 0; overflow: hidden;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button {% if not loop.first %}collapsed{% endif %}"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq{{ loop.index }}"
+                            style="background: #fff; color: #111; font-size: 18px; font-weight: 600; padding: 22px 24px; box-shadow: none;">
+                        {{ faq.q }}
+                    </button>
+                </h2>
+                <div id="faq{{ loop.index }}"
+                     class="accordion-collapse collapse {% if loop.first %}show{% endif %}"
+                     data-bs-parent="#faqAcc">
+                    <div class="accordion-body"
+                         style="font-size: 16px; line-height: 1.9; color: #555; padding: 22px 24px; background: #fff;">
+                        {{ faq.a }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 style="font-size: 48px; font-weight: 700; color: #111;">Latest Blogs</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            {% for post in latest_blog_posts %}
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ loop.index * 70 }}">
+                <div style="background: #f9f9f9; padding: 28px; min-height: 360px; border: 1px solid #f0f0f0; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="font-size: 20px; line-height: 1.45; font-weight: 600; color: #111; margin-bottom: 24px;">
+                            {{ post.title }}
+                        </h3>
+
+                        <p style="font-size: 16px; line-height: 1.9; color: #5f5f5f; margin-bottom: 28px;">
+                            {{ post.excerpt }}
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="{{ url_for('blog_post', slug=post.slug) }}"
+                           style="display: inline-block; background: #001b44; color: #fff; text-decoration: none; padding: 12px 28px; font-size: 16px; font-weight: 500;">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+<section class="section-pad cta-section">
+    <div class="container">
+        <div class="cta-box text-center" data-aos="zoom-in">
+            <h2>Ready to build a stronger digital presence?</h2>
+            <p>Use the secure contact form and manage enquiries from your protected admin dashboard.</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-brand btn-lg">Get In Touch</a>
+        </div>
+    </div>
+</section>
+
+<!-- ── WhatsApp Floating Button ── -->
+<a href="https://wa.me/917903812908?text=Hi%20Pesawala%2C%20I%20am%20interested%20in%20your%20services!"
+   class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.72.7 5.28 1.94 7.5L.5 31.5l8.26-1.9A15.46 15.46 0 0016 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.3a13.17 13.17 0 01-6.72-1.84l-.48-.28-4.9 1.12 1.16-4.76-.32-.5A13.2 13.2 0 1116 28.8zm7.24-9.88c-.4-.2-2.34-1.16-2.7-1.28-.36-.14-.62-.2-.88.2s-1.02 1.28-1.24 1.54c-.22.26-.44.3-.84.1a10.54 10.54 0 01-3.1-1.92 11.6 11.6 0 01-2.14-2.66c-.22-.4 0-.6.18-.8.16-.16.4-.44.58-.66.2-.22.26-.38.4-.64.14-.26.06-.5-.02-.7-.1-.2-.88-2.12-1.2-2.9-.32-.76-.64-.66-.88-.66h-.74c-.26 0-.68.1-1.04.48-.36.38-1.36 1.32-1.36 3.22s1.4 3.74 1.58 4c.2.26 2.74 4.18 6.64 5.86.92.4 1.64.64 2.2.82.92.3 1.76.26 2.42.16.74-.12 2.28-.94 2.6-1.84.32-.9.32-1.68.22-1.84-.1-.18-.34-.28-.74-.46z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+</a>
+
+<!-- ── Hero Canvas Particle Animation ── -->
+<script>
+(function(){
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], lines = [];
+  const COUNT = 90;
+  const COLORS = ['rgba(255,185,0,', 'rgba(138,99,255,', 'rgba(255,255,255,'];
+
+  function resize(){
+    const hero = canvas.closest('.hero-section');
+    W = canvas.width  = hero.offsetWidth;
+    H = canvas.height = hero.offsetHeight;
+  }
+
+  function rand(min, max){ return Math.random()*(max-min)+min; }
+
+  function createParticle(){
+    return {
+      x: rand(0, W), y: rand(0, H),
+      vx: rand(-0.4, 0.4), vy: rand(-0.4, 0.4),
+      r: rand(1.5, 3.5),
+      color: COLORS[Math.floor(Math.random()*COLORS.length)],
+      alpha: rand(0.4, 0.9)
+    };
+  }
+
+  function init(){
+    particles = [];
+    for(let i=0;i<COUNT;i++) particles.push(createParticle());
+  }
+
+  function drawDataRings(){
+    /* subtle rotating ring accents */
+    const cx = W * 0.78, cy = H * 0.5;
+    [120, 170, 220].forEach((r, i)=>{
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(Date.now()/6000 * (i%2===0?1:-1));
+      ctx.beginPath();
+      ctx.arc(0, 0, r, 0, Math.PI * 2 * (0.55 + i*0.12));
+      ctx.strokeStyle = `rgba(255,185,0,${0.07 - i*0.015})`;
+      ctx.lineWidth = 1.2;
+      ctx.setLineDash([6, 10]);
+      ctx.stroke();
+      ctx.restore();
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0, 0, W, H);
+
+    /* connect nearby particles with lines */
+    for(let i=0;i<particles.length;i++){
+      for(let j=i+1;j<particles.length;j++){
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx*dx+dy*dy);
+        if(dist < 130){
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(180,150,255,${0.18*(1-dist/130)})`;
+          ctx.lineWidth = 0.6;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    /* draw particles */
+    particles.forEach(p=>{
+      p.x += p.vx; p.y += p.vy;
+      if(p.x<0||p.x>W) p.vx*=-1;
+      if(p.y<0||p.y>H) p.vy*=-1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle = p.color + p.alpha + ')';
+      ctx.fill();
+    });
+
+    drawDataRings();
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  init();
+  draw();
+  window.addEventListener('resize', ()=>{ resize(); init(); });
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+
+{% block title %}CRM Services{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 6px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .content-block {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .content-block h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .content-block p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 15px;
+    }
+
+    .content-block ul {
+        margin: 15px 0 18px 20px;
+        padding: 0;
+    }
+
+    .content-block ul li {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 8px;
+    }
+
+    .service-bottom {
+        margin-top: 40px;
+        background: #fff;
+        border-left: 5px solid #4285f4;
+        padding: 35px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+
+        .content-block h3,
+        .service-bottom h3 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>CRM Services</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>CRM Development</h2>
+
+                <h3>Streamline. Scale. Succeed — CRM Solutions by ClickCatcher</h3>
+
+                <p>
+                    In today’s data-driven world, businesses need more than spreadsheets and scattered tools —
+                    they need intelligent systems that manage customer relationships, automate communication,
+                    and provide real-time insights.
+                </p>
+
+                <p>
+                    At ClickCatcher, we build custom CRM (Customer Relationship Management) solutions that are
+                    tailored to your business, optimized for your growth, and built to scale.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/crm-services.jpg') }}" alt="CRM Services">
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3>Why Your Business Needs CRM</h3>
+            <p>Without proper systems, businesses struggle with:</p>
+            <ul>
+                <li>Disconnected teams</li>
+                <li>Poor customer experience</li>
+                <li>Manual and repetitive follow-ups</li>
+                <li>No visibility into leads or customer behavior</li>
+                <li>Slow sales decision-making</li>
+            </ul>
+            <p>Our CRM solutions help you:</p>
+            <ul>
+                <li>Centralize customer data and interactions</li>
+                <li>Improve collaboration across sales and support teams</li>
+                <li>Track sales, leads, and follow-ups in real time</li>
+                <li>Deliver better service with customer history and behavior insights</li>
+                <li>Automate workflows and reduce manual errors</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3>What We Offer — CRM Features</h3>
+            <p>
+                Our CRM systems help you nurture leads, manage clients, and automate communication.
+            </p>
+            <ul>
+                <li>Lead Management & Scoring</li>
+                <li>Sales Funnel Tracking</li>
+                <li>Contact Database with Activity Logs</li>
+                <li>Email/SMS Automation & Campaigns</li>
+                <li>Deal Tracking & Follow-ups</li>
+                <li>Quotation and Invoicing</li>
+                <li>Reminders, Notes, Call Logs</li>
+                <li>Reports on sales, conversion, and customer behavior</li>
+            </ul>
+            <p>
+                Whether B2B or B2C, we build CRM workflows that fit your unique sales and service process.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Technology Stack We Use</h3>
+            <p>
+                At ClickCatcher, we use modern, secure, and scalable technologies:
+            </p>
+            <ul>
+                <li>Laravel, Node.js, React, Vue.js</li>
+                <li>MySQL, PostgreSQL, Firebase</li>
+                <li>RESTful APIs for third-party integrations</li>
+                <li>Mobile app support (Android/iOS) with Flutter or React Native</li>
+                <li>Cloud & on-premise deployment options (AWS, DigitalOcean, or your internal server)</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3>Real-Time Dashboards & Automation</h3>
+            <p>Data is only powerful when it’s actionable. That’s why we include:</p>
+            <ul>
+                <li>Custom dashboards with charts & KPIs</li>
+                <li>Live alerts and activity tracking</li>
+                <li>Workflow automation (e.g., auto-assign leads, send reminders)</li>
+                <li>Role-based reporting</li>
+                <li>Export and integration with Excel, Tally, QuickBooks, WhatsApp, and more</li>
+            </ul>
+            <p>
+                We make sure you spend less time managing customer data — and more time closing deals and building relationships.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Security, Scalability & Support</h3>
+            <p>Your data is your asset. Our CRM systems come with:</p>
+            <ul>
+                <li>Encrypted data security</li>
+                <li>Audit logs & role-level access</li>
+                <li>Backup and recovery features</li>
+                <li>Future-proof scalability</li>
+                <li>Ongoing support and training for your team</li>
+            </ul>
+            <p>
+                We also provide monthly AMC, upgrade plans, and dedicated support channels.
+            </p>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Let’s Build Your Customer Growth System — with ClickCatcher</h3>
+            <p>
+                Every business is unique. So why use off-the-shelf solutions that don’t fit?
+            </p>
+            <p>
+                Let ClickCatcher build a custom CRM platform tailored to your sales process, service flow, and business goals.
+                From lead management to automation and analytics — we help you deliver unmatched customer experience.
+            </p>
+            <p>
+                CRM development isn’t just software. It’s customer-focused business transformation.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+
+{% block title %}iOS App Development{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 28px;
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #111;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .service-bottom {
+        margin-top: 50px;
+        background: #fff;
+        border-left: 5px solid #999;
+        padding: 35px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro,
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>iOS App Development</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>iOS App Development</h2>
+
+                <h3>
+                    Build premium, secure, and high-performance iOS applications designed for iPhone and iPad users.
+                </h3>
+
+                <p>
+                    At Clickcatcher, we create iOS apps that combine sleek design, smooth performance, and reliable functionality.
+                    Whether you need a business app, ecommerce app, booking platform, service app, or custom mobile solution,
+                    we help transform your idea into a polished iOS application.
+                </p>
+
+                <p>
+                    From concept planning and interface design to development, testing, App Store launch, and ongoing support,
+                    we handle the complete iOS app development process with a focus on user experience and Apple-quality standards.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/ios-app-development.jpg') }}" alt="iOS App Development">
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Define the App Objective and Target Audience</h4>
+                <p>
+                    Start by understanding the core purpose of the app, the problem it will solve for iPhone or iPad users,
+                    and who your target audience is based on age, region, and interests. Clear objectives help build the
+                    right features and user experience.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Understand the iOS Ecosystem</h4>
+                <p>
+                    iOS runs on Apple devices like iPhone and iPad, and optionally Apple Watch and Apple TV.
+                    You need to consider screen sizes, device capabilities, and performance expectations while planning the app.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Choose Your Development Method</h4>
+                <p>
+                    There are three main approaches to building iOS apps: Native iOS Development using Swift or Objective-C in Xcode,
+                    Cross-Platform Development using Flutter, React Native, or Xamarin, and No-Code Builders like Adalo or Glide
+                    for simple apps or MVPs.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Plan UI/UX According to Apple Guidelines</h4>
+                <p>
+                    Apple follows strict Human Interface Guidelines. Your app should be clean, minimalistic,
+                    use native design patterns like tab bars and navigation, and offer smooth transitions and gestures.
+                    Tools like Figma, Sketch, or Adobe XD can help with prototyping.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Set Up the Development Environment</h4>
+                <p>
+                    Use a Mac system and install Xcode from the Mac App Store, along with the iOS Simulator for testing
+                    on multiple iPhone models. Swift is the modern and preferred language, while Objective-C is still used
+                    in older legacy applications.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Build Core Features</h4>
+                <p>
+                    Develop the app module by module, including features like login and signup, Apple Sign-In, camera access,
+                    media handling, in-app purchases, notifications, location services, and secure data storage using
+                    Keychain, CoreData, or Firebase.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Backend Integration</h4>
+                <p>
+                    Use Firebase, custom APIs built with Node.js or PHP, or GraphQL for advanced filtering and data handling.
+                    Make sure your backend uses HTTPS, token-based authentication, and privacy-focused data security practices.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Test the App on Real Devices</h4>
+                <p>
+                    Apple users expect a high-quality experience, so test on multiple iPhone models, including older ones,
+                    and on iPads if tablet support is included. Use TestFlight to share pre-release versions with testers.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>App Store Preparation</h4>
+                <p>
+                    Before launching, create an App Store Connect account, prepare the app icon, screenshots, promo video,
+                    and app metadata, and fill in privacy, age rating, and compliance information. Submit a signed IPA
+                    through Xcode for review.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Submit and Launch</h4>
+                <p>
+                    Submit your app for Apple review, which usually takes 24–72 hours. Once approved, your app goes live
+                    on the App Store. Promote it through social media, press releases, influencers, and email campaigns.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Post-Launch Maintenance</h4>
+                <p>
+                    After launch, monitor crashes using tools like Firebase Crashlytics, track analytics with tools such as
+                    Google Analytics for Firebase or Mixpanel, respond to user reviews, and publish regular updates to keep
+                    the app secure and compatible with new iOS versions.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Build Premium Mobile Experiences with iOS App Development</h3>
+            <p>
+                A successful iOS app is not only visually polished but also fast, secure, and intuitive.
+                At Clickcatcher, we develop iOS applications that match Apple’s high standards while helping businesses
+                deliver a premium experience to their users.
+            </p>
+            <p>
+                From idea validation and interface planning to App Store launch and long-term maintenance,
+                we help businesses create iOS apps that strengthen their brand, improve engagement, and support growth.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

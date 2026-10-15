@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+
+{% block title %}Android App Development{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 28px;
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #111;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .service-bottom {
+        margin-top: 50px;
+        background: #fff;
+        border-left: 5px solid #3ddc84;
+        padding: 35px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro,
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>Android App Development</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>Android App Development</h2>
+
+                <h3>
+                    Build powerful, user-friendly, and scalable Android apps that help your business
+                    reach mobile users effectively.
+                </h3>
+
+                <p>
+                    At Clickcatcher, we create Android applications that are designed for performance,
+                    usability, and growth. Whether you need a business app, ecommerce app, service platform,
+                    booking app, or custom solution, we help turn your idea into a functional mobile product.
+                </p>
+
+                <p>
+                    From planning and UI/UX design to development, testing, publishing, and maintenance,
+                    we handle the complete Android app development process with a focus on quality and user experience.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/android-app-development.jpg') }}" alt="Android App Development">
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Define the App Purpose and Goals</h4>
+                <p>
+                    Start by clearly defining what problem your app will solve, who your target audience is,
+                    and what core features you want to include. Having clear goals helps in planning the app
+                    structure and functionality efficiently.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Choose the Right Development Approach</h4>
+                <p>
+                    There are three main ways to build Android apps: Native Development using Java or Kotlin
+                    in Android Studio, Hybrid Development using Flutter or React Native, and Web-based Apps (PWA).
+                    Choose based on your budget, timeline, and performance requirements.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Plan the UI/UX Design</h4>
+                <p>
+                    A user-friendly design is critical for app success. Focus on clean layout and navigation,
+                    consistent branding, intuitive controls, and responsive design for different screen sizes.
+                    Use tools like Figma or Adobe XD before actual development.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Set Up the Development Environment</h4>
+                <p>
+                    Use Android Studio, the official IDE for Android app development. Install the required SDKs,
+                    emulators, and tools. Popular programming languages include Java, which is older but stable,
+                    and Kotlin, which is modern and officially recommended by Google.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Develop the Core Features</h4>
+                <p>
+                    Based on your plan, build important features like login and signup, push notifications,
+                    in-app purchases, GPS and maps integration, media access, offline mode, and payment gateway integration.
+                    Build and test each feature in modules.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Backend Integration</h4>
+                <p>
+                    If your app needs data storage, user management, or real-time functionality, use Firebase
+                    or build your own REST API using PHP, Node.js, or Python. Make sure to use secure authentication methods.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Testing and Debugging</h4>
+                <p>
+                    Test the app thoroughly on multiple screen sizes, Android OS versions, and different user flows.
+                    Fix bugs and optimize performance before release. Use Android Emulator, Firebase Test Lab,
+                    and real device testing for better reliability.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>App Store Preparation</h4>
+                <p>
+                    Before uploading to the Google Play Store, create app icons, splash screens, and feature graphics.
+                    Write a compelling app description, add screenshots and promotional videos, and prepare a signed
+                    APK or AAB file.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Publish and Promote</h4>
+                <p>
+                    Create a Google Play Console account to publish your app. Once reviewed and approved,
+                    your app will go live. Promote it through social media, email campaigns, website banners,
+                    and app review blogs.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Maintain and Update</h4>
+                <p>
+                    After publishing, monitor crash reports and user feedback, release updates with bug fixes
+                    and new features, and stay updated with the latest Android guidelines and OS changes.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Launch Smarter with Android App Development</h3>
+            <p>
+                A great Android app is more than just code — it is a complete user experience that solves real problems,
+                builds trust, and supports business growth. At Clickcatcher, we develop Android apps that are reliable,
+                scalable, and designed to perform in the real world.
+            </p>
+            <p>
+                From idea validation and feature planning to Play Store launch and post-launch support,
+                we help businesses build Android apps that engage users and create lasting impact.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

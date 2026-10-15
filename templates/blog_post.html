@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<style>
+    .blog-page {
+        background: #f7f7f7;
+        padding: 60px 0;
+    }
+
+    .blog-layout {
+        display: grid;
+        grid-template-columns: 2.2fr 0.8fr;
+        gap: 28px;
+    }
+
+    .single-post {
+        background: #fff;
+        border: 1px solid #e6e6e6;
+    }
+
+    .single-post img {
+        width: 100%;
+        display: block;
+    }
+
+    .single-post-body {
+        padding: 24px;
+    }
+
+    .single-post-title {
+        font-size: 32px;
+        line-height: 1.4;
+        margin-bottom: 14px;
+        font-weight: 600;
+        color: #222;
+    }
+
+    .blog-meta {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .blog-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .single-post-body p {
+        font-size: 16px;
+        line-height: 1.95;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: #0d6efd;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .blog-sidebar {
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        padding: 22px;
+        height: fit-content;
+    }
+
+    .sidebar-widget {
+        margin-bottom: 34px;
+    }
+
+    .sidebar-widget:last-child {
+        margin-bottom: 0;
+    }
+
+    .sidebar-widget h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: #222;
+    }
+
+    .search-box {
+        display: flex;
+    }
+
+    .search-box input {
+        flex: 1;
+        height: 40px;
+        border: 1px solid #d9d9d9;
+        padding: 0 12px;
+        outline: none;
+    }
+
+    .search-box button {
+        height: 40px;
+        border: none;
+        background: #1ea7fd;
+        color: #fff;
+        padding: 0 18px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    .sidebar-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-list li {
+        margin-bottom: 10px;
+        line-height: 1.7;
+    }
+
+    .sidebar-list a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .sidebar-list a:hover {
+        color: #0d6efd;
+    }
+
+    .sidebar-note {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 992px) {
+        .blog-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .single-post-title {
+            font-size: 26px;
+        }
+    }
+</style>
+
+<section class="blog-page">
+    <div class="container">
+        <div class="blog-layout">
+
+            <article class="single-post">
+                <img src="{{ url_for('static', filename=post.image) }}" alt="{{ post.title }}">
+
+                <div class="single-post-body">
+                    <h1 class="single-post-title">{{ post.title }}</h1>
+
+                    <div class="blog-meta">
+                        <span><i class="bi bi-person"></i> {{ post.author }}</span>
+                        <span><i class="bi bi-clock"></i> {{ post.date }}</span>
+                        <span><i class="bi bi-folder"></i> {{ post.category }}</span>
+                        <span><i class="bi bi-chat"></i> {{ post.comments }}</span>
+                    </div>
+
+                    {% for paragraph in post.content %}
+                    <p>{{ paragraph }}</p>
+                    {% endfor %}
+
+                    <a href="{{ url_for('blog') }}" class="back-link">← Back to Blog</a>
+                </div>
+            </article>
+
+            <aside class="blog-sidebar">
+                <div class="sidebar-widget">
+                    <h4>Search</h4>
+                    <form class="search-box">
+                        <input type="text" placeholder="Search">
+                        <button type="submit">SEARCH</button>
+                    </form>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Recent Posts</h4>
+                    <ul class="sidebar-list">
+                        {% for item in recent_posts %}
+                        <li>
+                            <a href="{{ url_for('blog_post', slug=item.slug) }}">{{ item.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Recent Comments</h4>
+                    <p class="sidebar-note">No comments to show.</p>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Archives</h4>
+                    <ul class="sidebar-list">
+                        {% for month in archives %}
+                        <li><a href="#">{{ month }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>Categories</h4>
+                    <ul class="sidebar-list">
+                        {% for category in categories %}
+                        <li><a href="#">{{ category }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

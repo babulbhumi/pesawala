@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+
+{% block title %}Graphic Design Service{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 6px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .content-block {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .content-block h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .content-block p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 15px;
+    }
+
+    .content-block ul {
+        margin: 15px 0 18px 20px;
+        padding: 0;
+    }
+
+    .content-block ul li {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 8px;
+    }
+
+    .service-bottom {
+        margin-top: 40px;
+        background: #fff;
+        border-left: 5px solid #ff4d6d;
+        padding: 35px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+
+        .content-block h3,
+        .service-bottom h3 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>Graphic Design Service</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>Graphic Design Service</h2>
+
+                <h3>Designs That Speak — Graphic Design by ClickCatcher</h3>
+
+                <p>
+                    In a world full of noise, only great design captures attention. At ClickCatcher,
+                    we blend creativity, strategy, and brand psychology to deliver graphic design
+                    solutions that don't just look good — they communicate, convert, and connect.
+                </p>
+
+                <p>
+                    Whether you’re building a brand from scratch or refreshing your visual identity,
+                    our design services are built to leave a lasting impact.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/graphic-design-service.jpg') }}" alt="Graphic Design Service">
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3>Design with Purpose. Art with Direction.</h3>
+            <p>
+                Graphic design is more than colors and shapes — it’s about creating a visual voice for your business.
+            </p>
+            <p>
+                At ClickCatcher, we begin by understanding your brand story, values, and audience.
+                Then we translate that essence into visuals that:
+            </p>
+            <ul>
+                <li>Capture attention in seconds</li>
+                <li>Deliver a consistent brand message</li>
+                <li>Build credibility and recognition</li>
+            </ul>
+            <p>
+                Every design we create is rooted in strategy and refined with emotion —
+                because design should not only be seen, it should be felt.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Our Graphic Design Services Include:</h3>
+            <p>
+                We offer a full suite of graphic design services to meet every branding and marketing need:
+            </p>
+            <ul>
+                <li><strong>Logo Design :</strong> Unique, memorable, and brand-aligned logos that become your business identity.</li>
+                <li><strong>Brand Identity Kits :</strong> Including typography, color palettes, icons, and brand guidelines — for complete brand consistency.</li>
+                <li><strong>Social Media Creatives :</strong> Engaging posts, story templates, banners, and ads tailored to each platform and campaign.</li>
+                <li><strong>Marketing Collateral :</strong> Brochures, flyers, posters, business cards, and banners — both print and digital ready.</li>
+                <li><strong>Packaging & Label Design :</strong> Product packaging that catches the eye on shelves or online and tells your brand story.</li>
+                <li><strong>Presentation & Pitch Deck Design :</strong> Visually rich and persuasive slide decks that help you win clients, investors, and hearts.</li>
+                <li><strong>Website & App UI Mockups :</strong> Pixel-perfect visuals for websites, landing pages, and mobile apps that guide seamless experiences.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3>Why Choose ClickCatcher for Design?</h3>
+            <p>
+                Design is at the heart of everything we do — and our process is what sets us apart.
+            </p>
+            <ul>
+                <li><strong>Strategic Thinking :</strong> We align design decisions with your business goals and marketing strategy.</li>
+                <li><strong>Creative Originality :</strong> Every design is custom-made — no templates, no copy-paste.</li>
+                <li><strong>Attention to Detail :</strong> From spacing to typography, every element is refined for visual perfection.</li>
+                <li><strong>Fast Turnaround :</strong> We respect your time and deliver on deadline — without compromising quality.</li>
+                <li><strong>Collaborative Process :</strong> Your vision + our creativity = stunning results. We involve you in each step for feedback and clarity.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3>Design That Delivers Results</h3>
+            <p>
+                Great design doesn’t just look pretty — it performs.
+            </p>
+            <p>Our work helps clients:</p>
+            <ul>
+                <li>Increase engagement on social platforms</li>
+                <li>Build strong brand recall</li>
+                <li>Boost marketing campaign conversions</li>
+                <li>Make a lasting impression on first-time viewers</li>
+            </ul>
+            <p>
+                When your brand looks professional, it earns trust faster — and that’s what drives growth.
+            </p>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Bring Your Brand to Life — with ClickCatcher</h3>
+            <p>
+                Whether you’re launching a new business, rebranding, or just need striking creatives for your next campaign,
+                ClickCatcher is your go-to creative partner.
+            </p>
+            <p>
+                We don’t just deliver graphics — we deliver meaning, value, and visual impact that helps your brand stand out
+                in a crowded world.
+            </p>
+            <p>
+                Let’s create visuals that get remembered, shared, and loved.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

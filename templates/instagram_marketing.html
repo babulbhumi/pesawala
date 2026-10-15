@@ -1,0 +1,273 @@
+{% extends "base.html" %}
+
+{% block title %}Instagram Marketing{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 28px;
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #111;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .service-bottom {
+        margin-top: 50px;
+        background: #fff;
+        border-left: 5px solid #e1306c;
+        padding: 35px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro,
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>Instagram</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>Instagram Marketing</h2>
+
+                <h3>
+                    Instagram marketing can be a powerful tool for businesses to visually engage their audience,
+                    build brand recognition, and drive sales.
+                </h3>
+
+                <p>
+                    Instagram isn’t just for selfies and stories—it’s one of the most powerful platforms to grow
+                    your brand, build community, and drive real business results. With over 2 billion active users
+                    and advanced targeting tools, Instagram gives businesses a unique opportunity to engage with
+                    potential customers in a personal, visual, and highly effective way.
+                </p>
+
+                <p>
+                    At Clickcatcher, we specialize in crafting high-impact Instagram marketing strategies that
+                    actually convert. From eye-catching creatives to data-backed ad campaigns, we help brands go
+                    from invisible to irresistible.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/instagram-marketing.jpg') }}" alt="Instagram Marketing">
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Define Your Goals</h4>
+                <p>
+                    Determine what you want to achieve with your Instagram campaign. Is it to increase brand
+                    awareness, drive traffic, build engagement, or boost conversions? Your goals will define
+                    your overall content and ad approach.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Create a Business Page</h4>
+                <p>
+                    Switch to an Instagram Business Account to access insights, run ads, and add contact buttons.
+                    Optimize your profile with a clear username, profile picture, compelling bio, and a link to
+                    your website or landing page.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Understand Your Audience</h4>
+                <p>
+                    Use Instagram Insights to study your followers’ age, gender, location, and online activity.
+                    Tailor your content to match their interests and behavior for better engagement and results.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Content Strategy</h4>
+                <p>
+                    Develop a content mix of photos, Reels, carousels, and Stories. Share valuable, visually
+                    appealing, and relevant content that resonates with your audience. Use branded templates,
+                    colors, and consistent tone.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Consistency</h4>
+                <p>
+                    Post regularly and maintain a content calendar. Use scheduling tools like Meta Creator Studio
+                    to ensure a consistent presence and avoid gaps that reduce visibility.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Engage with Your Audience</h4>
+                <p>
+                    Respond to comments, messages, and mentions quickly. Use polls, question stickers, and Story
+                    interactions to create two-way communication and foster community engagement.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Use Instagram Ads</h4>
+                <p>
+                    Leverage Instagram’s ad platform to promote posts, run story ads, or create lead generation
+                    campaigns. Target specific demographics and interests, and test multiple formats to find what works.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Monitor and Analyze</h4>
+                <p>
+                    Track your reach, impressions, engagement rate, and profile activity using Instagram Insights.
+                    Regularly assess performance and refine your strategy for better results.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Stay Updated</h4>
+                <p>
+                    Instagram frequently updates features like Reels, Threads, and shopping tools. Stay informed
+                    and adapt your strategy to use the latest tools effectively.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Test and Iterate</h4>
+                <p>
+                    Try different post types, ad creatives, hashtags, and posting times. Run A/B tests to find
+                    the best-performing combinations, and optimize based on data insights.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Grow Your Brand with Instagram Marketing</h3>
+            <p>
+                In today’s digital world, Instagram is more than just a photo-sharing app—it’s a powerful marketing
+                tool for building brand awareness, engaging with your audience, and driving real business results.
+                At Clickcatcher, we help businesses turn their Instagram presence into a lead-generating machine.
+            </p>
+            <p>
+                With a focus on strategy, not just aesthetics, we create content that speaks to your audience and
+                encourages action. From reels and stories to carousels and targeted ad campaigns, every piece of
+                content we craft is designed to build visibility, boost engagement, and convert followers into customers.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

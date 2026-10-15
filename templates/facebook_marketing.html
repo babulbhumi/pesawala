@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+
+{% block title %}Facebook Marketing{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 28px;
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #111;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .service-bottom {
+        margin-top: 50px;
+        background: #fff;
+        border-left: 5px solid #1877f2;
+        padding: 35px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro,
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>Facebook</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>Facebook Marketing</h2>
+
+                <h3>
+                    Build a stronger presence, grow your audience, and turn likes into leads—
+                    with ClickCatcher’s expert Facebook Management.
+                </h3>
+
+                <p>
+                    Your Facebook page is more than just a profile—it’s your brand’s digital handshake.
+                    At ClickCatcher, we help businesses create engaging, professional, and high-performing
+                    Facebook pages that connect with the right audience and drive real growth.
+                </p>
+
+                <p>
+                    We take the stress out of managing your Facebook presence by handling everything
+                    from content creation and posting schedules to ad campaigns and community engagement.
+                    Whether you're just starting out or looking to scale your reach, we develop a strategy
+                    that fits your brand voice, goals, and audience.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/facebook-marketing.jpg') }}" alt="Facebook Marketing">
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Define Your Goals</h4>
+                <p>
+                    Determine what you want to achieve with your Facebook marketing campaign.
+                    Is it to increase brand awareness, drive website traffic, generate leads, or boost sales?
+                    Your goals will shape your strategy.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Create a Business Page</h4>
+                <p>
+                    Set up a professional Facebook Business Page for your brand. Optimize your page with a
+                    compelling profile picture, cover photo, and detailed information about your business.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Understand Your Audience</h4>
+                <p>
+                    Use Facebook Insights and other analytics tools to understand your audience demographics,
+                    interests, and behavior. Tailor your content to resonate with your target audience.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Content Strategy</h4>
+                <p>
+                    Develop a content strategy that includes a mix of engaging content such as posts, videos,
+                    images, and stories. Share valuable and relevant content that provides value to your audience.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Consistency</h4>
+                <p>
+                    Be consistent with your posting schedule. Regularly update your page with fresh content
+                    to keep your audience engaged and interested.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Engage with Your Audience</h4>
+                <p>
+                    Respond to comments, messages, and reviews promptly. Encourage conversations and interactions
+                    with your audience to build relationships and loyalty.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Use Facebook Ads</h4>
+                <p>
+                    Utilize Facebook Ads to reach a wider audience, target specific demographics, and promote
+                    your products or services. Experiment with different ad formats such as carousel ads,
+                    video ads, and lead generation ads.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Monitor and Analyze</h4>
+                <p>
+                    Keep track of your Facebook marketing efforts using Facebook Insights and other analytics tools.
+                    Monitor key metrics such as reach, engagement, click-through rates, and conversions.
+                    Use this data to refine your strategy and optimize performance.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Stay Updated</h4>
+                <p>
+                    Stay informed about the latest Facebook algorithms, features, and trends.
+                    Adapt your strategy accordingly to stay relevant and maximize your results.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Test and Iterate</h4>
+                <p>
+                    Continuously test different approaches, content types, ad formats, and targeting options.
+                    Use A/B testing to identify what works best for your audience and optimize your campaigns
+                    based on data-driven insights.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Turn Scrolls into Sales with Facebook Marketing</h3>
+            <p>
+                With over 3 billion users worldwide, Facebook remains one of the most powerful platforms to reach
+                your ideal audience and grow your business. But boosting a post isn’t a strategy—it’s a shot in the dark.
+                That’s where ClickCatcher comes in.
+            </p>
+            <p>
+                We create data-driven Facebook marketing campaigns that actually deliver results—whether you're looking
+                to increase traffic, generate leads, or drive product sales. From engaging ad creatives and
+                laser-targeted audiences to optimized landing pages and remarketing funnels, we manage every step
+                for maximum ROI.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

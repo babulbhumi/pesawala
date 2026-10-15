@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="inner-hero">
+    <div class="container text-center">
+        <span class="section-tag light">Services & Packages</span>
+        <h1 class="mt-3">Choose the service you need</h1>
+        <p class="mx-auto">Click on a service to explore options</p>
+    </div>
+</section>
+
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="section-head text-center mb-5">
+            <span class="section-tag">Services</span>
+            <h2 class="mt-2">Our Core Services</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- WEBSITE -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card" onclick="toggleServiceOptions('web-options')">
+                    <div class="service-icon">
+                        <img src="{{ url_for('static', filename='images/services/web.png') }}">
+                    </div>
+                    <h4>Website Development</h4>
+                    <p>Responsive websites & custom solutions</p>
+                </div>
+
+                <div id="web-options" class="service-suboptions">
+                    <a href="{{ url_for('ecommerce_website') }}">E-commerce</a>
+                    <a href="{{ url_for('dynamic_website') }}">Dynamic</a>
+                    <a href="{{ url_for('static_website') }}">Static</a>
+                </div>
+            </div>
+
+            <!-- SEO -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card" onclick="toggleServiceOptions('seo-options')">
+                    <div class="service-icon">
+                        <img src="{{ url_for('static', filename='images/services/seo.png') }}">
+                    </div>
+                    <h4>SEO Services</h4>
+                    <p>Improve rankings & traffic</p>
+                </div>
+
+                <div id="seo-options" class="service-suboptions">
+                    <a href="{{ url_for('google_seo') }}">Google SEO</a>
+                    <a href="{{ url_for('gmb_seo') }}">GMB SEO</a>
+                </div>
+            </div>
+
+            <!-- SMM -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card" onclick="toggleServiceOptions('smm-options')">
+                    <div class="service-icon">
+                        <img src="{{ url_for('static', filename='images/services/smm.png') }}">
+                    </div>
+                    <h4>Social Media</h4>
+                    <p>Grow your brand presence</p>
+                </div>
+
+                <div id="smm-options" class="service-suboptions">
+                    <a href="{{ url_for('facebook_marketing') }}">Facebook</a>
+                    <a href="{{ url_for('instagram_marketing') }}">Instagram</a>
+                    <a href="{{ url_for('linkedin_marketing') }}">LinkedIn</a>
+                    <a href="{{ url_for('twitter_marketing') }}">Twitter</a>
+                </div>
+            </div>
+
+            <!-- GRAPHIC -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card" onclick="toggleServiceOptions('graphic-options')">
+                    <div class="service-icon">
+                        <img src="{{ url_for('static', filename='images/services/graphic.png') }}">
+                    </div>
+                    <h4>Graphic Design</h4>
+                    <p>Creative branding & visuals</p>
+                </div>
+
+                <div id="graphic-options" class="service-suboptions">
+                    <a href="{{ url_for('graphic_design_service') }}">Design</a>
+                    <a href="{{ url_for('branding_logo_design') }}">Branding</a>
+                    <a href="{{ url_for('brochure_design') }}">Brochure</a>
+                </div>
+            </div>
+
+            <!-- APP -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card" onclick="toggleServiceOptions('app-options')">
+                    <div class="service-icon">
+                        <img src="{{ url_for('static', filename='images/services/app.png') }}">
+                    </div>
+                    <h4>App Development</h4>
+                    <p>Android & iOS apps</p>
+                </div>
+
+                <div id="app-options" class="service-suboptions">
+                    <a href="{{ url_for('android_development') }}">Android</a>
+                    <a href="{{ url_for('ios_development') }}">iOS</a>
+                </div>
+            </div>
+
+            <!-- ERP -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card" onclick="toggleServiceOptions('erp-options')">
+                    <div class="service-icon">
+                        <img src="{{ url_for('static', filename='images/services/erp.png') }}">
+                    </div>
+                    <h4>ERP / CRM</h4>
+                    <p>Business automation systems</p>
+                </div>
+
+                <div id="erp-options" class="service-suboptions">
+                    <a href="{{ url_for('erp_services') }}">ERP</a>
+                    <a href="{{ url_for('crm_services') }}">CRM</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CSS -->
+<style>
+.service-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    border: 2px solid transparent;
+    user-select: none;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+}
+
+.service-card.open {
+    border-color: #7c3aed;
+    box-shadow: 0 8px 28px rgba(124,58,237,0.18);
+    transform: translateY(-2px);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: #f3e8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    transition: background 0.25s;
+}
+
+.service-card.open .service-icon {
+    background: #ede9fe;
+}
+
+.service-icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Sub-options: hidden by default, shown via .active */
+.service-suboptions {
+    display: none !important;
+    margin-top: 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.service-suboptions.active {
+    display: flex !important;
+    animation: fadeSlideDown 0.22s ease;
+}
+
+.service-suboptions a {
+    padding: 8px 16px;
+    background: #f1f5f9;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #1e1b4b;
+    font-size: 13.5px;
+    font-weight: 500;
+    border: 1px solid rgba(124,58,237,0.15);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.service-suboptions a:hover {
+    background: #7c3aed;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<!-- JS -->
+<script>
+function toggleServiceOptions(id) {
+    const allOptions = document.querySelectorAll('.service-suboptions');
+    const allCards   = document.querySelectorAll('.service-card');
+    const target     = document.getElementById(id);
+    const isOpen     = target.classList.contains('active');
+
+    /* close everything first */
+    allOptions.forEach(el => el.classList.remove('active'));
+    allCards.forEach(el => el.classList.remove('open'));
+
+    /* if it was not already open, open it now */
+    if (!isOpen) {
+        target.classList.add('active');
+        const parentCard = target.previousElementSibling;
+        if (parentCard) parentCard.classList.add('open');
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+    }
+}
+</script>
+
+{% endblock %}

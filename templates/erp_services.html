@@ -1,0 +1,273 @@
+{% extends "base.html" %}
+
+{% block title %}ERP Services{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 6px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .content-block {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .content-block h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .content-block p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 15px;
+    }
+
+    .content-block ul {
+        margin: 15px 0 18px 20px;
+        padding: 0;
+    }
+
+    .content-block ul li {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 8px;
+    }
+
+    .service-bottom {
+        margin-top: 40px;
+        background: #fff;
+        border-left: 5px solid #0f9d58;
+        padding: 35px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+
+        .content-block h3,
+        .service-bottom h3 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>ERP Services</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>ERP Development</h2>
+
+                <h3>Streamline. Scale. Succeed — ERP Solutions by ClickCatcher</h3>
+
+                <p>
+                    In today’s data-driven world, businesses need more than spreadsheets and scattered tools —
+                    they need integrated, intelligent systems that automate workflows, manage operations,
+                    and provide real-time insights.
+                </p>
+
+                <p>
+                    At ClickCatcher, we build custom ERP (Enterprise Resource Planning) solutions that are
+                    tailored to your business, optimized for your growth, and built to scale.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/erp-services.jpg') }}" alt="ERP Services">
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3>Why Your Business Needs ERP</h3>
+            <p>Without proper systems, businesses struggle with:</p>
+            <ul>
+                <li>Disconnected teams</li>
+                <li>Manual and repetitive tasks</li>
+                <li>No data visibility or control</li>
+                <li>Slow decision-making</li>
+            </ul>
+            <p>Our ERP solutions help you:</p>
+            <ul>
+                <li>Centralize data and operations</li>
+                <li>Improve collaboration across departments</li>
+                <li>Track inventory, accounts, tasks, and processes in real time</li>
+                <li>Automate workflows and reduce manual errors</li>
+            </ul>
+            <p>
+                ClickCatcher’s ERP platforms are built to make your business smarter, faster, and more agile.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>What We Offer — ERP Modules</h3>
+            <p>
+                We develop modular ERP systems so you only pay for what you need — and can scale anytime.
+            </p>
+            <ul>
+                <li>Inventory & Stock Management</li>
+                <li>Sales & Purchase Management</li>
+                <li>HR & Payroll System</li>
+                <li>Vendor & Supplier Management</li>
+                <li>Accounting & Finance Integration</li>
+                <li>Task & Project Management</li>
+                <li>Production / Manufacturing (MRP)</li>
+                <li>Reporting & Analytics Dashboard</li>
+            </ul>
+            <p>
+                Each module is customizable, role-based, and secured with user access controls.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Technology Stack We Use</h3>
+            <p>
+                At ClickCatcher, we use modern, secure, and scalable technologies:
+            </p>
+            <ul>
+                <li>Laravel, Node.js, React, Vue.js</li>
+                <li>MySQL, PostgreSQL, Firebase</li>
+                <li>RESTful APIs for third-party integrations</li>
+                <li>Mobile app support (Android/iOS) with Flutter or React Native</li>
+                <li>Cloud & on-premise deployment options (AWS, DigitalOcean, or your internal server)</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3>Real-Time Dashboards & Automation</h3>
+            <p>Data is only powerful when it’s actionable. That’s why we include:</p>
+            <ul>
+                <li>Custom dashboards with charts & KPIs</li>
+                <li>Live alerts and activity tracking</li>
+                <li>Workflow automation (e.g., auto-assign tasks, send reminders)</li>
+                <li>Role-based reporting</li>
+                <li>Export and integration with Excel, Tally, QuickBooks, WhatsApp, and more</li>
+            </ul>
+            <p>
+                We make sure you spend less time managing systems — and more time growing your business.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Security, Scalability & Support</h3>
+            <p>Your data is your asset. Our ERP systems come with:</p>
+            <ul>
+                <li>Encrypted data security</li>
+                <li>Audit logs & role-level access</li>
+                <li>Backup and recovery features</li>
+                <li>Future-proof scalability</li>
+                <li>Ongoing support and training for your team</li>
+            </ul>
+            <p>
+                We also provide monthly AMC, upgrade plans, and dedicated support channels.
+            </p>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Let’s Build Your Business Operating System — with ClickCatcher</h3>
+            <p>
+                Every business is unique. So why use off-the-shelf solutions that don’t fit?
+            </p>
+            <p>
+                Let ClickCatcher build a custom ERP platform tailored to your workflows, industry, and goals.
+                From automation to analytics — we empower you to take control of operations and boost team productivity.
+            </p>
+            <p>
+                ERP development isn’t just software. It’s business transformation.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

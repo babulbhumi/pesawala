@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Pay Now{% endblock %}
+
+{% block content %}
+<style>
+    .pay-hero {
+        background: #001b44;
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .pay-hero h1 {
+        font-size: 48px;
+        margin: 0;
+    }
+
+    .plans-section {
+        background: #f5f5f5;
+        padding: 70px 20px;
+    }
+
+    .plans-container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .plans-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .plan-card {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .plan-card h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .plan-card p {
+        color: #555;
+        line-height: 1.8;
+    }
+
+    .plan-price {
+        font-size: 30px;
+        font-weight: 700;
+        color: #001b44;
+        margin: 18px 0;
+    }
+
+    .pay-btn {
+        display: inline-block;
+        background: #001b44;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .pay-btn:hover {
+        background: #00327a;
+    }
+
+    @media (max-width: 768px) {
+        .plans-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .pay-hero h1 {
+            font-size: 36px;
+        }
+    }
+</style>
+
+<section class="pay-hero">
+    <h1>Pay Now</h1>
+    <p>Select your package and complete the payment securely.</p>
+</section>
+
+<section class="plans-section">
+    <div class="plans-container">
+        <div class="plans-grid">
+            {% for plan in plans %}
+            <div class="plan-card">
+                <h3>{{ plan.name }}</h3>
+                <p>{{ plan.description }}</p>
+                <div class="plan-price">₹{{ plan.price }}</div>
+                <button class="pay-btn" onclick="payNow('{{ plan.id }}')">Pay Now</button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<form id="payment-success-form" action="{{ url_for('payment_success') }}" method="POST" style="display:none;">
+    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
+    <input type="hidden" name="razorpay_order_id" id="razorpay_order_id">
+    <input type="hidden" name="razorpay_signature" id="razorpay_signature">
+</form>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    async function payNow(planId) {
+        const response = await fetch("/create-order", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ plan_id: planId })
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            alert(data.error);
+            return;
+        }
+
+        const options = {
+            key: "{{ razorpay_key_id }}",
+            amount: data.amount,
+            currency: "INR",
+            name: "Pesawala",
+            description: data.plan_name,
+            order_id: data.order_id,
+            handler: function (response) {
+                document.getElementById("razorpay_payment_id").value = response.razorpay_payment_id;
+                document.getElementById("razorpay_order_id").value = response.razorpay_order_id;
+                document.getElementById("razorpay_signature").value = response.razorpay_signature;
+                document.getElementById("payment-success-form").submit();
+            },
+            theme: {
+                color: "#001b44"
+            }
+        };
+
+        const rzp = new Razorpay(options);
+        rzp.open();
+    }
+</script>
+{% endblock %}

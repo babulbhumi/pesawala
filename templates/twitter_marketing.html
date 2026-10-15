@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+
+{% block title %}Twitter Marketing{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 28px;
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #111;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .service-bottom {
+        margin-top: 50px;
+        background: #fff;
+        border-left: 5px solid #1d9bf0;
+        padding: 35px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro,
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>Twitter</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>Twitter Marketing</h2>
+
+                <h3>
+                    Unlocking the Power of Twitter Marketing with ClickCatcher.
+                </h3>
+
+                <p>
+                    Twitter (now X) is where conversations happen in real time — and your brand deserves to be part
+                    of those conversations in a smart, engaging way. Our digital marketing team helps you build a
+                    strong and authentic presence on Twitter by creating content that connects, responds, and converts.
+                </p>
+
+                <p>
+                    We don’t just post tweets — we craft meaningful messages that reflect your brand voice, attract the
+                    right audience, and spark engagement. From trending hashtags and daily updates to brand storytelling,
+                    product launches, polls, and customer interactions, we manage everything strategically to keep your
+                    profile active and growing.
+                </p>
+
+                <p>
+                    Our experts track trends, analyze performance, and adjust content regularly to ensure maximum reach
+                    and engagement. We also handle replies, mentions, and direct messages to maintain a responsive and
+                    trustworthy brand image.
+                </p>
+
+                <p>
+                    Whether your goal is brand awareness, lead generation, website traffic, or community building, we turn
+                    Twitter into a powerful marketing channel for your business. With consistent posting, creative visuals,
+                    smart campaigns, and real-time engagement, we help your brand stand out in fast-moving social conversations
+                    — just like a real human voice, not a robot.
+                </p>
+
+                <p>
+                    Let’s make your brand heard, followed, and remembered on Twitter.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/twitter-marketing.jpg') }}" alt="Twitter Marketing">
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Instant Communication</h4>
+                <p>
+                    Twitter’s real-time nature allows brands to engage with their audience instantly. Whether it’s sharing
+                    updates, responding to customer queries, or addressing feedback, Twitter facilitates direct and immediate communication.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Vast Reach</h4>
+                <p>
+                    With millions of active users worldwide, Twitter offers a vast audience for businesses to tap into.
+                    Through targeted strategies, we help businesses reach their ideal customers and maximize their visibility on the platform.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Engagement Opportunities</h4>
+                <p>
+                    Twitter’s real-time nature allows brands to engage with their audience instantly. Whether it’s sharing updates,
+                    responding to customer queries, or addressing feedback, Twitter facilitates direct and immediate communication.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Brand Storytelling</h4>
+                <p>
+                    With millions of active users worldwide, Twitter offers a vast audience for businesses to tap into.
+                    Through targeted strategies, we help businesses reach their ideal customers and maximize their visibility on the platform.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Content Creation</h4>
+                <p>
+                    Our team of content creators develops tailor-made content that aligns with your brand’s voice and resonates
+                    with your target audience. From tweets, images, and videos to polls and threads, we utilize diverse formats
+                    to keep your content fresh and engaging.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Hashtag Strategy</h4>
+                <p>
+                    Strategic use of hashtags is crucial for enhancing visibility and joining relevant conversations. We conduct
+                    thorough hashtag research and implement a targeted hashtag strategy to amplify your reach and attract organic engagement.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Community Engagement</h4>
+                <p>
+                    Building and nurturing a community on Twitter is paramount. We proactively engage with your followers,
+                    respond to inquiries, address feedback, and foster meaningful interactions to strengthen customer relationships
+                    and brand loyalty.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Analytics and Optimization</h4>
+                <p>
+                    We leverage Twitter analytics to track performance, measure key metrics, and gain actionable insights.
+                    This data-driven approach allows us to optimize strategies, identify growth opportunities, and continuously
+                    refine our efforts for maximum impact.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Twitter Ads Management</h4>
+                <p>
+                    As certified Twitter Ads specialists, we design and manage targeted ad campaigns to reach specific demographics,
+                    promote your offerings, and drive conversions. From promoted tweets to sponsored hashtags, we optimize ad spend
+                    for optimal ROI.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Grow Faster with Twitter Marketing</h3>
+            <p>
+                At ClickCatcher, we understand the intricacies of Twitter marketing and employ innovative strategies to propel your
+                brand forward. With our expertise and dedication, we help you harness the full potential of Twitter to achieve your
+                marketing goals and elevate your online presence.
+            </p>
+            <p>
+                Ready to ignite your Twitter marketing strategy? Contact us today and let’s make your brand shine in the digital sphere.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

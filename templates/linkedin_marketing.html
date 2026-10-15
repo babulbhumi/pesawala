@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% block title %}LinkedIn Marketing{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 28px;
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #111;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .service-bottom {
+        margin-top: 50px;
+        background: #fff;
+        border-left: 5px solid #0a66c2;
+        padding: 35px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro,
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>Linkedin</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>Linkedin Marketing</h2>
+
+                <h3>
+                    LinkedIn is a powerful platform for professional networking, lead generation, and brand building.
+                </h3>
+
+                <p>
+                    At Clickcatcher, we help businesses leverage LinkedIn not just as a networking platform—but as a powerful marketing engine.
+                    With over 1 billion professionals on LinkedIn, your next big client is already here. The question is: can they find you?
+                </p>
+
+                <p>
+                    We craft LinkedIn strategies that build authority, attract leads, and drive conversions. From optimized profiles
+                    to lead-generation content and targeted messaging campaigns, we help B2B brands stand out in a crowded feed.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/linkedin-marketing.jpg') }}" alt="LinkedIn Marketing">
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Optimize Your Profile</h4>
+                <p>
+                    Start by optimizing your LinkedIn profile. Use a professional profile picture, a compelling headline,
+                    and a detailed summary that highlights your expertise, achievements, and unique value proposition.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Create a Company Page</h4>
+                <p>
+                    Set up a dedicated LinkedIn Company Page for your business. Complete all the sections with accurate information,
+                    including your company description, logo, cover image, and contact details.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>LinkedIn Publishing</h4>
+                <p>
+                    Leverage LinkedIn Publishing to create and share long-form content such as articles and blog posts.
+                    Publishing quality content can establish you as a thought leader in your industry and attract a broader audience.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Utilize LinkedIn Groups</h4>
+                <p>
+                    Join and participate in LinkedIn Groups relevant to your industry or target audience.
+                    Engage in meaningful discussions, share insights, and connect with group members to expand your network and visibility.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>LinkedIn Ads</h4>
+                <p>
+                    Consider using LinkedIn Ads to reach a targeted audience based on criteria such as job title, industry,
+                    company size, and location. Experiment with different ad formats such as Sponsored Content,
+                    Sponsored InMail, and Text Ads to promote your products/services or generate leads.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Build Relationships</h4>
+                <p>
+                    Focus on building genuine relationships with connections, clients, prospects, and industry influencers.
+                    Personalize connection requests, send personalized messages, and nurture relationships over time.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Showcase Company Culture</h4>
+                <p>
+                    Share content that showcases your company culture, values, employee achievements, and community involvement.
+                    This humanizes your brand and attracts talent, clients, and business opportunities.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Monitor Analytics</h4>
+                <p>
+                    Use LinkedIn Analytics to track the performance of your content, company page, and advertising campaigns.
+                    Monitor key metrics such as engagement, reach, followers, and leads.
+                    Use these insights to refine your strategy and optimize your results.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Grow Authority and Leads with LinkedIn Marketing</h3>
+            <p>
+                LinkedIn is one of the most effective platforms for B2B growth, professional branding, and lead generation.
+                At Clickcatcher, we help businesses turn LinkedIn into a high-performing channel for visibility, trust, and conversions.
+            </p>
+            <p>
+                From profile optimization and content strategy to targeted outreach and paid campaigns, we create LinkedIn marketing
+                solutions that help your business connect with decision-makers, build credibility, and generate real opportunities.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

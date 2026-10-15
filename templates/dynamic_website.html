@@ -1,0 +1,316 @@
+{% extends "base.html" %}
+
+{% block title %}Dynamic Website Development{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 28px;
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #111;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .service-bottom {
+        margin-top: 50px;
+        background: #fff;
+        border-left: 5px solid #6c63ff;
+        padding: 35px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro,
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>Dynamic Website Development</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>Dynamic Website Development</h2>
+
+                <h3>
+                    Build Dynamic Experiences with ClickCatcher.
+                </h3>
+
+                <p>
+                    In a fast-paced digital world, static websites are no longer enough. Today’s users expect
+                    dynamic, interactive, and intelligent digital experiences that adapt to their needs.
+                    At ClickCatcher, we specialize in dynamic website development that goes beyond basic pages —
+                    delivering scalable, secure, and user-responsive platforms that evolve with your business.
+                </p>
+
+                <p>
+                    Whether you need a service portal, membership website, booking system, dashboard, or interactive
+                    business platform, we create dynamic solutions that are built for flexibility, automation, and growth.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/dynamic-website.jpg') }}" alt="Dynamic Website Development">
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>The Living Web</h4>
+                <p>
+                    A dynamic website is more than a collection of pages — it is a living digital system.
+                    It can update in real time, personalize content for users, sync with data sources,
+                    and automate business workflows with ease.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Responsive User Interaction</h4>
+                <p>
+                    We build websites that respond to user input, display content based on live data,
+                    and create smarter experiences that feel interactive, modern, and useful.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>API & Platform Integration</h4>
+                <p>
+                    Our dynamic websites integrate with APIs and third-party platforms so your business tools,
+                    services, and workflows stay connected and efficient.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Easy Content Management</h4>
+                <p>
+                    No more manual page editing. We create systems that let you manage and update content easily
+                    through admin panels or CMS solutions.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Modern Backend Development</h4>
+                <p>
+                    We use technologies like PHP, Laravel, and Node.js to build secure backend systems
+                    that power your website’s core logic and functionality.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Database Integration</h4>
+                <p>
+                    We work with MySQL, Firebase, and MongoDB for real-time and structured data handling,
+                    ensuring your website can store, manage, and retrieve information efficiently.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>CMS with Custom Features</h4>
+                <p>
+                    We can integrate CMS platforms like WordPress with custom dynamic functionality,
+                    giving you flexibility without losing ease of management.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>AJAX, JSON & REST APIs</h4>
+                <p>
+                    We use AJAX, JSON, and REST APIs for asynchronous functionality, allowing your website
+                    to load and update content smoothly without constant page refreshes.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Admin Panel Development</h4>
+                <p>
+                    Our custom admin panels give you control over content, users, orders, bookings,
+                    services, and other business data in real time.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Tailored UI/UX Design</h4>
+                <p>
+                    We combine attractive design with smart user experience so your website is visually compelling,
+                    intuitive to navigate, and mobile responsive.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Speed & SEO Optimization</h4>
+                <p>
+                    Dynamic does not mean slow. We optimize your website for fast loading, strong performance,
+                    and better search engine visibility.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>CRM & Email Integrations</h4>
+                <p>
+                    Connect your website with tools like HubSpot, Mailchimp, and Zoho for lead generation,
+                    email automation, and customer relationship management.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Bookings, Forms & Automation</h4>
+                <p>
+                    We integrate appointment booking systems, data capture forms, calendars, and automation workflows
+                    to make your website a powerful business tool.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Social, Payment & Third-Party Tools</h4>
+                <p>
+                    From social media feeds to payment gateways and external services, we connect your website
+                    with the tools you need for a complete digital ecosystem.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Performance That Scales</h4>
+                <p>
+                    We build with future growth in mind using modular code, caching, cloud hosting options,
+                    and scalable architecture that can handle increasing traffic and features.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Multi-Language & User Roles</h4>
+                <p>
+                    Need multiple languages or different access levels for users, admins, and staff?
+                    We can build those capabilities directly into your dynamic website.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Let’s Go Dynamic with ClickCatcher</h3>
+            <p>
+                If your business demands more than a static brochure website, it’s time to go dynamic.
+                Whether you need a service portal, membership site, interactive blog, or smart landing hub,
+                ClickCatcher has the expertise, tools, and creativity to bring it to life.
+            </p>
+            <p>
+                Let’s turn your ideas into a powerful digital experience that performs, adapts, and delivers results.
+                Your dynamic website journey begins with ClickCatcher.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

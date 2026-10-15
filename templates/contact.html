@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="inner-hero">
+    <div class="container text-center">
+        <span class="section-tag light">Contact</span>
+        <h1 class="mt-3">Send us your project details</h1>
+        <p class="mx-auto">Every message goes into SQLite and appears in the protected admin dashboard.</p>
+    </div>
+</section>
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+                <div class="contact-info-card h-100">
+                    <h3>Let’s talk</h3>
+                    <p>Share your goals and we’ll reach out with a tailored solution.</p>
+                    <ul class="contact-list">
+                        <li><i class="bi bi-telephone"></i> {{ site.phone }}</li>
+                        <li><i class="bi bi-envelope"></i> {{ site.email }}</li>
+                        <li><i class="bi bi-geo-alt"></i> {{ site.city }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="contact-form-card">
+                    <form method="POST" class="row g-3">
+                        <div class="col-md-6"><input class="form-control" name="name" placeholder="Full Name *" required></div>
+                        <div class="col-md-6"><input type="email" class="form-control" name="email" placeholder="Email Address *" required></div>
+                        <div class="col-md-6"><input class="form-control" name="phone" placeholder="Phone Number"></div>
+                        <div class="col-md-6">
+                            <select class="form-select" name="service">
+                                <option value="">Select Service</option>
+                                {% for service in site.services %}<option>{{ service.title }}</option>{% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-12"><textarea class="form-control" name="message" rows="6" placeholder="Tell us about your requirement *" required></textarea></div>
+                        <div class="col-12"><button class="btn btn-brand btn-lg" type="submit">Send Message</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

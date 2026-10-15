@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="inner-hero">
+    <div class="container text-center">
+        <span class="section-tag light">About Us</span>
+        <h3 class="mt-3">Turning Clicks into Customers</h3>
+        <p class="mx-auto">Welcome to Pesa Wala – Your Digital Growth Partner
+
+            At Pesa Wala, we believe that every business deserves the opportunity to grow and succeed in the digital
+            world. Our goal is simple: to help brands build a powerful online presence, connect with the right audience,
+            and achieve measurable business growth.
+
+            In today’s competitive digital landscape, success requires more than just being online. It requires
+            strategy, creativity, and data-driven decisions. That’s where Pesa Wala comes in. We combine innovative
+            marketing strategies with modern technology to help businesses transform their digital presence into real
+            opportunities.
+        </p>
+    </div>
+</section>
+
+<section class="section-pad bg-white">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+
+
+            <div class="col-lg-6">
+                <div class="about-logo-wrap">
+                    <img src="{{ url_for('static', filename='images/about-logo.png') }}" class="about-logo"
+                         alt="{{ site.brand }}">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <span class="section-tag">Who We Are</span>
+                <h5>We partner with startups, small businesses, and growing brands to build strong digital identities
+                    and achieve sustainable growth. Every project we take on is approached with a focus on creativity,
+                    performance, and results.</h5>
+                <p>Our mission is to empower businesses by providing innovative and results-driven digital marketing
+                    solutions. We aim to help our clients attract the right audience, increase engagement, and convert
+                    potential customers into loyal supporters of their brand.</p>
+
+                <div class="feature-grid mt-4">
+                    <div class="feature-badge"><i class="bi bi-check2-circle"></i> Secure admin login</div>
+                    <div class="feature-badge"><i class="bi bi-check2-circle"></i> Exportable contact data</div>
+                    <div class="feature-badge"><i class="bi bi-check2-circle"></i> Responsive homepage</div>
+                    <div class="feature-badge"><i class="bi bi-check2-circle"></i> Editable assets</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

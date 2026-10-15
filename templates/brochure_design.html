@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% block title %}Brochure Design{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 6px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .content-block {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 30px;
+        margin-bottom: 28px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .content-block h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .content-block p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 15px;
+    }
+
+    .content-block ul {
+        margin: 15px 0 18px 20px;
+        padding: 0;
+    }
+
+    .content-block ul li {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 8px;
+    }
+
+    .service-bottom {
+        margin-top: 40px;
+        background: #fff;
+        border-left: 5px solid #8e44ad;
+        padding: 35px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+
+        .content-block h3,
+        .service-bottom h3 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>Brochure Design</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>Brochure Design</h2>
+
+                <h3>Bring Your Brand to Life on Paper — Brochure Design by ClickCatcher</h3>
+
+                <p>
+                    In a world full of fleeting digital messages, a well-crafted brochure still holds power,
+                    presence, and permanence. At ClickCatcher, we design brochures that not only showcase
+                    your offerings but tell your story, reflect your brand, and inspire action.
+                </p>
+
+                <p>
+                    Whether it’s for corporate presentations, product catalogs, real estate, or events —
+                    our brochures create lasting impressions in the hands of your audience.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/brochure-design.jpg') }}" alt="Brochure Design">
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h3>Why Brochures Still Matter</h3>
+            <p>Even in a digital era, brochures are powerful because they are:</p>
+            <ul>
+                <li>Tangible and trustworthy</li>
+                <li>Perfect for face-to-face marketing</li>
+                <li>Ideal for events, meetings, and B2B deals</li>
+                <li>Cost-effective for direct distribution</li>
+                <li>A compact way to deliver detailed information</li>
+            </ul>
+            <p>
+                At ClickCatcher, we turn your content into professionally designed, brand-aligned brochures
+                that make an impact — online and in print.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Our Brochure Design Services Include</h3>
+            <p>We offer a wide range of brochure formats and styles tailored to your business needs:</p>
+            <ul>
+                <li><strong>Bi-Fold & Tri-Fold Brochures :</strong> Compact and perfect for brief service or product overviews</li>
+                <li><strong>Multi-Page Corporate Brochures :</strong> Ideal for company profiles, catalogs, or annual reports</li>
+                <li><strong>Product Brochures :</strong> Detail-rich layouts for tech products, fashion collections, or industrial tools</li>
+                <li><strong>Event or Promo Brochures :</strong> Designed to drive attendance and buzz for upcoming launches, expos, or training sessions</li>
+                <li><strong>Digital Brochures (Interactive PDFs) :</strong> For email campaigns, WhatsApp sharing, and websites — clickable and optimized for screens</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h3>Our Design Approach</h3>
+            <p>
+                At ClickCatcher, we blend strategic messaging with elegant design to create brochures
+                that are both informative and visually engaging.
+            </p>
+            <p><strong>What you get:</strong></p>
+            <ul>
+                <li>Custom design aligned with your brand identity</li>
+                <li>High-quality layout using industry design tools</li>
+                <li>Consistent use of fonts, color palette, and graphic elements</li>
+                <li>Strong visual hierarchy to guide the reader</li>
+                <li>Print-ready + digital-optimized versions</li>
+            </ul>
+            <p>
+                We also offer copy refinement and creative writing support if your content needs polishing.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3>Deliverables You Receive</h3>
+            <p>With each brochure design project, ClickCatcher delivers:</p>
+            <ul>
+                <li>Final brochure in high-res PDF (print-ready)</li>
+                <li>Web-optimized version for email or online sharing</li>
+                <li>Editable source file (optional — Adobe Illustrator, InDesign, or Canva Pro)</li>
+                <li>Thumbnail preview images for WhatsApp/social sharing</li>
+                <li>Print margin and bleed setup included</li>
+            </ul>
+            <p>
+                We make sure your design is ready to impress — wherever it goes.
+            </p>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Let’s Turn Your Message into a Masterpiece — with ClickCatcher</h3>
+            <p>
+                Whether you’re launching a new product, presenting to investors, or preparing for an expo —
+                a stunning brochure from ClickCatcher will elevate your message and boost your brand credibility.
+            </p>
+            <p>
+                Let us help you turn ideas into impactful visuals — that your audience can hold, flip, and remember.
+            </p>
+            <p>
+                Brochure design is not just about pages — it’s about storytelling that sells.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

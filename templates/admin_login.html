@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="admin-body">
+    <div class="admin-login-wrap">
+        <div class="admin-login-card shadow-lg">
+            <div class="text-center mb-4">
+                <div class="admin-badge">Admin Access</div>
+                <h2 class="mt-3">Secure Login</h2>
+                <p class="text-muted mb-0">Login to view and export contact enquiries.</p>
+            </div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+            <form method="POST">
+                <div class="mb-3"><input type="email" name="email" class="form-control form-control-lg" placeholder="Admin Email" required></div>
+                <div class="mb-3"><input type="password" name="password" class="form-control form-control-lg" placeholder="Password" required></div>
+                <button class="btn btn-brand w-100 btn-lg" type="submit">Login</button>
+            </form>
+            <div class="admin-help mt-3 text-center">Use the direct admin URL only. No public admin button is shown on the website.</div>
+        </div>
+    </div>
+</body>
+</html>

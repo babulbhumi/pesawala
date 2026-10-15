@@ -1,0 +1,381 @@
+{% extends "base.html" %}
+
+{% block title %}SEO Services{% endblock %}
+
+{% block content %}
+<style>
+    .service-hero {
+        background: #001b44;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .service-hero h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .service-section {
+        padding: 70px 0;
+        background: #f5f5f5;
+    }
+
+    .service-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .service-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .service-text h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #111;
+    }
+
+    .service-text p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 18px;
+    }
+
+    .service-image img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .service-card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 28px;
+        transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+
+    .service-card h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+        color: #111;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin: 0;
+    }
+
+    .service-bottom {
+        margin-top: 50px;
+        background: #fff;
+        border-left: 5px solid #34a853;
+        padding: 35px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .service-bottom h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .service-bottom p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: 992px) {
+        .service-intro,
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+
+<section class="service-hero">
+    <h1>SEO Services</h1>
+</section>
+
+<section class="service-section">
+    <div class="service-container">
+
+        <div class="service-intro">
+            <div class="service-text">
+                <h2>SEO Services</h2>
+
+                <h3>
+                    SEO, or Search Engine Optimization, is a digital marketing strategy aimed at improving
+                    a website’s visibility and ranking in search engine results pages (SERPs).
+                </h3>
+
+                <p>
+                    Ranking on the first page of Google isn’t luck—it’s strategy. At Clickcatcher, we specialize
+                    in SEO services that help your business rise above the competition, attract quality traffic,
+                    and convert clicks into customers.
+                </p>
+
+                <p>
+                    Our SEO approach is data-driven, ethical, and results-focused. We dive deep into your industry,
+                    analyze your competitors, and identify the best keyword opportunities to help your brand show up
+                    when it matters most. From technical SEO and on-page optimization to content creation and backlink
+                    building—we handle it all.
+                </p>
+            </div>
+
+            <div class="service-image">
+                <img src="{{ url_for('static', filename='images/google-seo.jpg') }}" alt="SEO Services">
+            </div>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <h4>Keyword Research</h4>
+                <p>
+                    Identify relevant keywords and phrases with high search volume and low competition
+                    to target the right audience and improve search visibility.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Optimized Content</h4>
+                <p>
+                    Create high-quality, relevant content incorporating targeted keywords in titles,
+                    headings, meta descriptions, and throughout the text.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Meta Tags</h4>
+                <p>
+                    Optimize meta titles and meta descriptions to accurately reflect page content
+                    and entice clicks in search results.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>URL Structure</h4>
+                <p>
+                    Use SEO-friendly URLs with descriptive keywords, and avoid long strings of numbers
+                    or unnecessary symbols.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Internal Linking</h4>
+                <p>
+                    Link related pages within your website to improve navigation, help search engines
+                    crawl your site better, and distribute link equity effectively.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Backlink Building</h4>
+                <p>
+                    Acquire high-quality backlinks from authoritative websites to improve domain authority,
+                    trustworthiness, and rankings.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Social Signals</h4>
+                <p>
+                    Encourage social sharing and engagement to increase brand visibility,
+                    attract traffic, and support broader SEO goals.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Local SEO</h4>
+                <p>
+                    Optimize local listings, Google Business Profile, and citations for stronger
+                    local search visibility and nearby customer reach.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Site Speed</h4>
+                <p>
+                    Ensure fast loading times for a better user experience and stronger
+                    search engine rankings.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Mobile Optimization</h4>
+                <p>
+                    Design responsive websites that perform well on mobile devices, as Google
+                    prioritizes mobile-friendly sites.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Structured Data Markup</h4>
+                <p>
+                    Use schema markup to provide search engines with additional context about your content
+                    and improve visibility in rich results.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>XML Sitemap</h4>
+                <p>
+                    Create and submit XML sitemaps to help search engines crawl and index
+                    your website efficiently.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>SSL Certificate</h4>
+                <p>
+                    Secure your website with HTTPS to boost security and gain trust from users
+                    and search engines.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Mobile-Friendly Design</h4>
+                <p>
+                    Optimize user experience for mobile users with responsive design,
+                    easy navigation, and mobile-specific usability improvements.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Page Speed</h4>
+                <p>
+                    Ensure fast-loading pages to reduce bounce rates, improve user satisfaction,
+                    and support better ranking performance.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Clear Call-to-Action (CTA)</h4>
+                <p>
+                    Use compelling CTAs to guide users toward desired actions, such as signing up,
+                    making a purchase, or contacting your business.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Engaging Content</h4>
+                <p>
+                    Create informative, engaging, and shareable content that meets user intent
+                    and provides real value.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Quality Content</h4>
+                <p>
+                    Focus on creating valuable, well-researched, and unique content that answers
+                    user queries and solves their problems.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Content Updates</h4>
+                <p>
+                    Regularly update and refresh content to keep it relevant and maintain
+                    strong search engine rankings.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Long-Form Content</h4>
+                <p>
+                    Create comprehensive guides, tutorials, and case studies that demonstrate expertise,
+                    improve topical authority, and attract backlinks.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Optimized Images and Videos</h4>
+                <p>
+                    Use descriptive filenames, alt tags, and captions for images and videos
+                    to improve accessibility and search visibility.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Google Analytics</h4>
+                <p>
+                    Monitor website traffic, user behavior, conversions, and other key metrics
+                    to track SEO performance and make data-driven decisions.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Search Console</h4>
+                <p>
+                    Use Google Search Console to identify indexing issues, view search queries,
+                    and monitor website performance in search results.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h4>Keyword Tracking</h4>
+                <p>
+                    Track keyword rankings and performance to measure the effectiveness
+                    of SEO efforts and make adjustments as needed.
+                </p>
+            </div>
+        </div>
+
+        <div class="service-bottom">
+            <h3>Grow Organically with Powerful SEO Strategy</h3>
+            <p>
+                SEO is not just about rankings—it’s about getting discovered by the right people at the right time.
+                At Clickcatcher, we build search strategies that improve visibility, drive qualified traffic,
+                and support long-term business growth.
+            </p>
+            <p>
+                From technical fixes and on-page improvements to content strategy and ongoing performance tracking,
+                we help your business build a stronger presence on Google and turn organic traffic into real results.
+            </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
