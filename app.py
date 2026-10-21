@@ -32,21 +32,31 @@ SITE = {
     'brand': 'PESAWALA',
     'phone': '+1 3617230932',
     'email': 'support@pesawala.com',
-    'city': 'Noida, India',
+    'city': 'Weber Road, Corpus Christi, Texas',
     'hero_title': 'Boost Your Brand Visibility With Performance-Driven Digital Solutions',
     'hero_subtitle': 'Quantumnts Digital is a modern digital solutions company dedicated to helping businesses grow in the online world. We specialize in delivering smart,'
                      ' creative, and result-driven services that empower brands to build a strong digital presence and reach their target audience effectively.'
                      'At Quantumnts Digital, we believe every business has unique potential.',
     'services': [
 
-        {'title': 'Website Development', 'desc': 'Responsive business websites, landing pages, and custom portals built for speed and conversion.', 'icon': 'code-slash', 'img': 'images/services/web.png'},
-        {'title': 'SEO Services', 'desc': 'On-page, technical, local, and content SEO to improve rankings and qualified traffic.', 'icon': 'search', 'img': 'images/services/seo.png'},
-        {'title': 'Social Media Management', 'desc': 'Platform-specific content planning, creative posting, and performance campaigns.', 'icon': 'share', 'img': 'images/services/smm.png'},
-        {'title': 'Graphic Design', 'desc': 'Brand visuals, marketing creatives, ad banners, and polished presentation assets.', 'icon': 'palette', 'img': 'images/services/graphic.png'},
-        {'title': 'App Development', 'desc': 'Android and iOS app interfaces with scalable backend integration.', 'icon': 'phone', 'img': 'images/services/app.png'},
-        {'title': 'ERP / CRM Development', 'desc': 'Custom internal systems to streamline operations, leads, and client workflows.', 'icon': 'layers', 'img': 'images/services/erp.png'}
+        {'title': 'Website Development',
+         'desc': 'Responsive business websites, landing pages, and custom portals built for speed and conversion.',
+         'icon': 'code-slash', 'img': 'images/services/web.png'},
+        {'title': 'SEO Services',
+         'desc': 'On-page, technical, local, and content SEO to improve rankings and qualified traffic.',
+         'icon': 'search', 'img': 'images/services/seo.png'},
+        {'title': 'Social Media Management',
+         'desc': 'Platform-specific content planning, creative posting, and performance campaigns.', 'icon': 'share',
+         'img': 'images/services/smm.png'},
+        {'title': 'Graphic Design',
+         'desc': 'Brand visuals, marketing creatives, ad banners, and polished presentation assets.', 'icon': 'palette',
+         'img': 'images/services/graphic.png'},
+        {'title': 'App Development', 'desc': 'Android and iOS app interfaces with scalable backend integration.',
+         'icon': 'phone', 'img': 'images/services/app.png'},
+        {'title': 'ERP / CRM Development',
+         'desc': 'Custom internal systems to streamline operations, leads, and client workflows.', 'icon': 'layers',
+         'img': 'images/services/erp.png'}
     ],
-
 
     'team': [
         {
@@ -57,13 +67,19 @@ SITE = {
         },
         {
             'name': 'Zeba Heena',
-            'role': 'HR & Marketing',
+            'role': 'Director',
             'bio': 'Leads consultations, client discovery, and campaign onboarding.',
             'image': 'zeba.jpg'
         },
+
+        {
+            'name': 'Richa Singh',
+            'role': 'HR & Marketing',
+            'bio': 'Handles talent acquisition, employee relations, and team culture.',
+        },
         {
             'name': 'Babul Kumar',
-            'role': 'Software Devloper',
+            'role': 'Software Developer',
             'bio': 'Builds fast, conversion-focused websites and custom front-end experiences.',
             'image': 'babul.jpg'
         },
@@ -73,6 +89,7 @@ SITE = {
             'bio': 'Handles research, technical SEO, content planning, and reporting.',
             'image': 'sahil.jpg'
         }
+
     ],
 
     'packages': [
@@ -80,63 +97,69 @@ SITE = {
             'id': 'standard_smo',
             'name': 'Standard SMO',
             'subtitle': 'Facebook + Instagram',
-            'price': 24000,
-            'price_display': '₹24,000 / 3 months',
-            'features': ['20 creatives per month', '4 short videos', 'Captions and hashtags', 'Organic activity support', 'Basic ad management']
+            'price': 250,
+            'price_display': '$250 / 3 months',
+            'features': ['20 creatives per month', '4 short videos', 'Captions and hashtags',
+                         'Organic activity support', 'Basic ad management']
         },
         {
             'id': 'premium_smo',
             'name': 'Premium SMO',
             'subtitle': 'Facebook + Instagram + YouTube + X',
-            'price': 30000,
-            'price_display': '₹30,000 / 3 months',
-            'features': ['20 creatives per month', '6 short videos', 'Enhanced posting schedule', 'Organic activity support', 'Paid ads coordination']
+            'price': 310,
+            'price_display': '$310 / 3 months',
+            'features': ['20 creatives per month', '6 short videos', 'Enhanced posting schedule',
+                         'Organic activity support', 'Paid ads coordination']
         },
         {
             'id': 'seo_package',
             'name': 'SEO Package',
             'subtitle': '20 target keywords',
-            'price': 24000,
-            'price_display': '₹24,000 / 3 months',
+            'price': 250,
+            'price_display': '$250 / 3 months',
             'features': ['Keyword research', 'On-page SEO', 'Technical audits', 'Monthly reports', 'Competitor review']
         },
         {
             'id': 'combo_growth',
             'name': 'Combo Growth',
             'subtitle': 'SMO + SEO + Website + GMB',
-            'price': 200000,
-            'price_display': '₹2,00,000 / year',
-            'features': ['Full-funnel strategy', 'Website refresh', 'SEO + SMM', 'Local visibility setup', 'Performance reporting']
+            'price': 2100,
+            'price_display': '$2100 / year',
+            'features': ['Full-funnel strategy', 'Website refresh', 'SEO + SMM', 'Local visibility setup',
+                         'Performance reporting']
         }
     ],
 
     'testimonials': [
-        {'name': 'R. Jain', 'text': 'Very smooth communication, timely delivery, and a clear improvement in our online visibility.'},
-        {'name': 'Jatin Sharma', 'text': 'The team was responsive and structured. We got our website and campaigns launched quickly.'},
-        {'name': 'John', 'text': 'Professional execution and strong design quality. Good option for service businesses.'}
+        {'name': 'R. Jain',
+         'text': 'Very smooth communication, timely delivery, and a clear improvement in our online visibility.'},
+        {'name': 'Jatin Sharma',
+         'text': 'The team was responsive and structured. We got our website and campaigns launched quickly.'},
+        {'name': 'John',
+         'text': 'Professional execution and strong design quality. Good option for service businesses.'}
     ],
     'faqs': [
-    {
-        'q': 'What services does Click Catcher offer?',
-        'a': 'We offer website development, SEO, social media marketing, app development, graphic design, branding, brochure design, ERP solutions, CRM solutions, and digital growth services.'
-    },
-    {
-        'q': 'How do I know which marketing service is right for my business?',
-        'a': 'We first understand your business goals, target audience, and current digital presence, then suggest the most suitable service mix for growth.'
-    },
-    {
-        'q': 'How long does it take to see results?',
-        'a': 'The timeline depends on the service. Paid campaigns can show results quickly, while SEO and long-term organic growth usually take more time.'
-    },
-    {
-        'q': 'Will I be able to track the performance of my campaigns?',
-        'a': 'Yes, we provide reporting, analytics, and performance tracking so you can monitor results clearly.'
-    },
-    {
-        'q': 'Why should I choose Click Catcher over other digital marketing agencies?',
-        'a': 'We focus on strategy, quality execution, transparent communication, and measurable results tailored to your business needs.'
-    }
-]
+        {
+            'q': 'What services does Click Catcher offer?',
+            'a': 'We offer website development, SEO, social media marketing, app development, graphic design, branding, brochure design, ERP solutions, CRM solutions, and digital growth services.'
+        },
+        {
+            'q': 'How do I know which marketing service is right for my business?',
+            'a': 'We first understand your business goals, target audience, and current digital presence, then suggest the most suitable service mix for growth.'
+        },
+        {
+            'q': 'How long does it take to see results?',
+            'a': 'The timeline depends on the service. Paid campaigns can show results quickly, while SEO and long-term organic growth usually take more time.'
+        },
+        {
+            'q': 'Will I be able to track the performance of my campaigns?',
+            'a': 'Yes, we provide reporting, analytics, and performance tracking so you can monitor results clearly.'
+        },
+        {
+            'q': 'Why should I choose Click Catcher over other digital marketing agencies?',
+            'a': 'We focus on strategy, quality execution, transparent communication, and measurable results tailored to your business needs.'
+        }
+    ]
 }
 
 BLOG_POSTS = [
@@ -592,17 +615,21 @@ def blog_post(slug):
         categories=categories
     )
 
+
 @app.route('/privacy-policy')
 def privacy_policy():
     return render_template('privacy_policy.html', site=SITE)
+
 
 @app.route('/terms-and-conditions')
 def terms_and_conditions():
     return render_template('terms_and_conditions.html', site=SITE)
 
+
 @app.route('/cancellation-refund-policy')
 def cancellation_refund_policy():
     return render_template('cancellation_refund_policy.html', site=SITE)
+
 
 if __name__ == '__main__':
     init_db()

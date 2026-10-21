@@ -94,7 +94,7 @@
             <div class="plan-card">
                 <h3>{{ plan.name }}</h3>
                 <p>{{ plan.description }}</p>
-                <div class="plan-price">₹{{ plan.price }}</div>
+                <div class="plan-price">${{ plan.price }}</div>
                 <button class="pay-btn" onclick="payNow('{{ plan.id }}')">Pay Now</button>
             </div>
             {% endfor %}
