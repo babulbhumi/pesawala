@@ -76,6 +76,7 @@ SITE = {
             'name': 'Richa Singh',
             'role': 'HR & Marketing',
             'bio': 'Handles talent acquisition, employee relations, and team culture.',
+            'image': 'richa.jpg',
         },
         {
             'name': 'Babul Kumar',
